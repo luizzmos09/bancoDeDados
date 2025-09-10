@@ -1,2 +1,19 @@
 # bancoDeDados
-Repositório para armazenar conteúdo das aulas de banco de dados
+Esse repositório contém os scripts de banco de dados utilizados nas aulas.
+A ideia é que o conteudo saja enriquecido progressivamente, com novos
+exercicios e funcionalidades conforme o curso avança. cada aula terá umscript comentado explicando o conceito abordado.
+
+
+
+## Requisitos
+certifique-se de ter os seguintes requisitos atendidos antes de começar:
+* MYSQL instalado (XAMPP)
+* MYSQL Workbanch
+
+## como utilizar esse repertorio
+1. clone esse repertorio para seu ambiente de desenvolvimento local
+utilizando o comando:
+```
+git clone https://github.com/luizzmos09/bancoDeDados.git
+
+
