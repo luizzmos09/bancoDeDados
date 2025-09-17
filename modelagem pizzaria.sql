@@ -75,7 +75,7 @@ values ('tom', '23', 4444, 'revisar cadastro');
 insert into auxiliar (nome , idades , tel ,obs)
 values ('eva', '22', 5555, 'sem telefone alternativo');
 
-select*from auxiliar;
+
 
 insert into auxiliar (nome , idades , tel ,obs)
 values ('teste', '22', 5555, 'sem telefone alternativo');
@@ -100,8 +100,77 @@ update auxiliar set obs = 'prferencia por email' where nome = 'eva';
 update auxiliar set nome = 'tia', tel=8888 where id = 3;
 
 -- evitar update sem where pois ira alterar todos os registros
-update auxiliar set tel = 99999;
+-- update auxiliar set tel = 99999;
 
-select * from auxiliar
+select * from auxiliar;
+
+/* sintaxe do DELETE
+delete from nome_da_tabela
+where condição;
+*/
+
+-- excluir o registro com o nome leo 
+delete from auxiliar where nome = 'leo';
+
+
+-- excluir o registro com id5
+delete from auxiliar where id = 5;
+
+-- excluir todos com idades = 20
+delete from auxiliar where idades= 20;
+
+-- excluir todos os registros da tabela
+delete from auxiliar;
+-- sempre use WHERE no DELETE, senão todas as linhas da tabela serão apagadas
+
+-- exibir todas as tabelas 
+show tables;
+
+-- exibe a definição das colunas de uma tabela
+-- mostrando informações como nome da coluna
+-- tipo de dados , se aceita valores nulos, chaves
+-- valor padrão e outra caracteristica
+describe auxiliar;
+
+-- apagar uma coluna de uma tabela
+alter table auxiliar drop obs;
+
+-- adicionar uma nova coluna a tabela
+alter table auxiliar add data_nascimento date;
+
+-- modificando o tipo de uma coluna em uma tabela
+alter table auxiliar modify tel varchar(10);
+-- alterar o nome e o tipo de coluna em uma tabela
+alter table auxiliar change tel telefone varchar(14);
+alter table auxiliar change idades idade integer;
+-- apagar uma tabela
+drop table auxiliar;
+
+select * from auxiliar;
+
+insert into clientes (telefone, nome, logradouro, numero, complemento,
+bairro, referencia)
+values ('(11) 11111-1111', 'Alexandre Santos', 'Rua das Palmeiras',111, NULL,
+'Bela Vista' , 'Em frente a escola');
+insert into clientes (telefone, nome, logradouro, numero, complemento,
+bairro, referencia)
+values ('(22) 22222-2222', 'Bruna Dantas', 'Rua das Rosas',222, 'Cantareira',
+null );
+insert into clientes (telefone, nome, logradouro, numero, complemento,
+bairro, referencia)
+values ('(33) 33333-3333', 'Bruna Vieira', 'Rua das Avencas',333,null, 'Bela Vista',
+null );
+insert into clientes (telefone, nome, logradouro, numero, complemento,
+bairro, referencia)
+values ('(44) 44444-4444', 'Giulia Silva', 'Rua dos Cravos',444,'Cantareira', 
+'esquina do mercado');
+insert into clientes (telefone, nome, logradouro, numero, complemento,
+bairro, referencia)
+values ('(55) 55555-5555', 'Jose Silva', 'Rua das Acácias',555,'Bela Vista', 
+'ap 301');
+insert into clientes (telefone, nome, logradouro, numero, complemento,
+bairro, referencia)
+values ('(66) 66666-6666', 'Laura Madureira', 'Rua das Gardências',666,'Bloco 3', 
+'Cantareira');
 
 
