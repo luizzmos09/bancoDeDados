@@ -56,7 +56,52 @@ foreign key(pedido_id) references pedidos (id),
 primary key (pedido_id,pizza_id)
 );
 
+create table auxiliar(
+id integer not null auto_increment primary key,
+nome varchar(3),
+idades varchar(3),
+tel int,
+obs varchar(150)
+);
+
+insert into auxiliar (nome , idades , tel ,obs)
+values ('ana', '20', 1111, 'sem observações');
+insert into auxiliar (nome , idades , tel ,obs)
+values ('leo', '21', 2222, 'contato urgente');
+insert into auxiliar (nome , idades , tel ,obs)
+values ('bia', '19', 3333, 'ligação não atendida');
+insert into auxiliar (nome , idades , tel ,obs)
+values ('tom', '23', 4444, 'revisar cadastro');
+insert into auxiliar (nome , idades , tel ,obs)
+values ('eva', '22', 5555, 'sem telefone alternativo');
+
+select*from auxiliar;
+
+insert into auxiliar (nome , idades , tel ,obs)
+values ('teste', '22', 5555, 'sem telefone alternativo');
 
 
+/* Sintaxe do UPDATE
+update nome_da_tabel
+set coluna = valor1, ciluna2 = valor2 .... colunaN =valorN
+where condição 
+*/
+
+-- atualizar o telefone da ana
+update auxiliar set tel = 7777 where nome = 'ana';
+
+-- corrigir a idade de Tom para 20 anos
+update auxiliar set idades = 20 where nome = 'tom';
+
+-- alterar obs da eva
+update auxiliar set obs = 'prferencia por email' where nome = 'eva';
+
+-- alterar nome e telefone do id3
+update auxiliar set nome = 'tia', tel=8888 where id = 3;
+
+-- evitar update sem where pois ira alterar todos os registros
+update auxiliar set tel = 99999;
+
+select * from auxiliar
 
 
