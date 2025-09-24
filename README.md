@@ -14,6 +14,8 @@ certifique-se de ter os seguintes requisitos atendidos antes de começar:
 1. clone esse repertorio para seu ambiente de desenvolvimento local
 utilizando o comando:
 ```
+git config --global user.name luizzmo09
+git config --global user.email luizzmos09@gmail.com
 git clone https://github.com/luizzmos09/bancoDeDados.git
 
 
